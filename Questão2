@@ -1,0 +1,21 @@
+num = int(input("Digite um número inteiro positivo: "))
+
+#Questão 02 -
+# Verificar se o número é menor ou igual a 0
+if num <= 0:
+    print("Por favor, digite um número inteiro positivo!")
+else:
+    # Definir os primeiros dois termos.
+    a, b = 0, 1
+    fib = [a, b]
+
+    # Calcular a sequência até o número informado.
+    while b <= num:
+        a, b = b, a + b
+        fib.append(b)
+
+    # Verificar se o número pertence à sequência.
+    if num in fib:
+        print(f"O número {num} pertence à sequência de Fibonacci!")
+    else:
+        print(f"O número {num} não pertence à sequência de Fibonacci!")
